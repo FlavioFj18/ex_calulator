@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_PT">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,10 +18,10 @@
             <input type="button" class="btn-cal" value="%">
             <input type="button" class="btn-cal" value="CE">
             <input type="button" class="btn-cal" value="C">
-            <input type="button" class="btn-cal" value="&#22">
+            <input type="button" class="btn-cal" value="⌫">
             <input type="button" class="btn-cal" value="1/x">
-            <input type="button" class="btn-cal" value="x2">
-            <input type="button" class="btn-cal" value="&#22">
+            <input type="button" class="btn-cal" value="x²">
+            <input type="button" class="btn-cal" value="√">
             <input type="button" class="btn-cal" value="/">
             <input type="button" class="btn-cal" value="7">
             <input type="button" class="btn-cal" value="8">
@@ -43,7 +43,16 @@
     </div>
 
     <script>
-        function 
+        const botao = document.querySelectorAll(".btn-cal");
+        
+        //adicionando um evento de clique para cada button
+        // Adicionar evento de clique para cada botão
+        botao.forEach(botao => {
+            botao.addEventListener("click", (event) => {
+                const clicado = event.target; // Identifica o botão clicado
+                alert(`Você clicou no: ${clicado.value}`);
+            });
+        });
     </script>
 </body>
 </html>
