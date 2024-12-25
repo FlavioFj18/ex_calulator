@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-areas: 
+    "aside header"
+    "aside main"
+    "footer footer";
+}
+
+header{
+    background-color: rgb(142, 148, 176);
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 3px 8px -1px rgb(17, 17, 123)!important;
+    border-bottom-right-radius: 20px;
+}
+
+
+aside{
+    height: 100%;
+    background-color: rgb(88, 123, 181);
+    color: antiquewhite;
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+
+h1{
+    text-wrap: nowrap;
+    color: white;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav ul a{
+    text-decoration: none;
+    background-color: rgb(20, 20, 221);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+nav ul a:hover{
+    background-color: brown;
+    font-size: 1.5rem;
+    padding: 8px 20px;
+}
+
+main{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 2%;
+}
+
+div.card{
+    box-shadow: 1px 3px 8px -1px red!important;
+}
+
+footer{
+    background-color: rgb(11, 201, 188);
+    grid-area: footer;
+}
