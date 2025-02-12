@@ -1,9 +1,10 @@
-const botao = document.querySelectorAll(".btn-cal");
+const botao = document.querySelectorAll(".bt");
 let valorBotao = "";
 let firstValor = "";
 let nextValor = "";
 const sinalOperador = document.querySelectorAll('.btn-cal.operador');
 let sinal = "";
+const errButton = document.querySelectorAll('.err');
 
 // Adicionar evento de clique de cada botão
 botao.forEach(botao => {
@@ -88,6 +89,13 @@ sinalOperador.forEach(operador => {
         }
     });
 });
+
+errButton.forEach(operador => {
+    operador.addEventListener("click", (event) => {
+        alert("Em desenvolvimento");
+        document.getElementById("tela").value = 0;
+    })
+})
 
 /* function verificarValor(valor) {
         if (!isNaN(valor) && valor !== '') { 
