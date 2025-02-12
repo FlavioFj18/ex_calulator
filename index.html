@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt_PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA</title>
+    <link rel="stylesheet" href="componentes/stylesheet/bootstrap.min.css">
+    <link rel="stylesheet" href="componentes/stylesheet/calculadora.css">
+    <link rel="stylesheet" href="componentes/stylesheet/icons/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="container card" id="container">
+        <h1>CALCULADORA</h1>
+        <div class="tela">
+            <input type="text" id="tela" value="0" readonly>
+        </div>
+        <div class="btns">
+            <input type="button" class="btn-cal" value="%">
+            <input type="button" class="btn-cal" value="CE">
+            <input type="button" class="btn-cal" value="C">
+            <input type="button" class="btn-cal" value="⌫">
+            <input type="button" class="btn-cal" value="1/x">
+            <input type="button" class="btn-cal" value="x²">
+            <input type="button" class="btn-cal" value="√">
+            <input type="button" class="btn-cal operador" value="/">
+            <input type="button" class="btn-cal nb" value="7">
+            <input type="button" class="btn-cal nb" value="8">
+            <input type="button" class="btn-cal nb" value="9">
+            <input type="button" class="btn-cal operador" value="*">
+            <input type="button" class="btn-cal nb" value="4">
+            <input type="button" class="btn-cal nb" value="5">
+            <input type="button" class="btn-cal nb" value="6">
+            <input type="button" class="btn-cal operador" value="-">
+            <input type="button" class="btn-cal nb" value="1">
+            <input type="button" class="btn-cal nb" value="2">
+            <input type="button" class="btn-cal nb" value="3">
+            <input type="button" class="btn-cal operador" value="+">
+            <input type="button" class="btn-cal" value="+/-">
+            <input type="button" class="btn-cal nb" value="0">
+            <input type="button" class="btn-cal" value=",">
+            <input type="button" class="btn-cal operador" id="calcular" value="=">
+        </div>
+    </div>
+
+    <script src="componentes/scriptjs/script-calculator.js"></script>
+    <script src="componentes/scriptjs/bootstrap.min.js"></script>
+</body>
+</html>
