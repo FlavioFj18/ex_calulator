@@ -93,9 +93,7 @@ sinalOperador.forEach(operador => {
 errButton.forEach(operador => {
     operador.addEventListener("click", (event) => {
         alert("Em desenvolvimento");
-        document.getElementById("tela").value = "Sorry";
-        firstValor = "";
-        nextValor = "";
+        
     })
 })
 
