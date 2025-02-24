@@ -39,13 +39,16 @@ botao.forEach(botao => {
         if ([...sinalOperador].some(op => op.value === clicado.value)) {
             if (firstValor === "") {
                 firstValor += valorBotao; 
-                // Acumula os valores no firstValor   
+                // Acumula os valores no firstValor 
+                document.getElementById("tela").style.background = "red";  
             }
-                valorBotao = ""; // Reseta o valor temporário
+            
+            valorBotao = ""; // Reseta o valor temporário
                 
             } else if (firstValor !== "") {
                 nextValor = valorBotao;
                 // alert(nextValor);
+                document.getElementById("tela").style.background = "blueviolet";
         }
 
 
@@ -81,7 +84,8 @@ sinalOperador.forEach(operador => {
                 document.getElementById("tela").value = clicado.value;
                 sinal = clicado.value; 
             break;
-            case "=": 
+            case "=":
+                document.getElementById("tela").style.background = "blue"; 
                 switch (sinal) {
                     case "+":
                         result = v1 + v2;

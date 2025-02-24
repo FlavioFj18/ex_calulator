@@ -50,8 +50,9 @@ body{
 .container .tela #tela{
     background-color: black;
     border: 2px solid blue;
-    border-radius: 10px;
-    padding: 3%;
+    border-radius: 15px;
+    padding: 5%;
     color: white;
     text-align: end;
+    transition: 1.7s ease-in-out;
 }
