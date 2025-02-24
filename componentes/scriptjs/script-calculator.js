@@ -63,7 +63,6 @@ sinalOperador.forEach(operador => {
         let v1 = parseFloat(firstValor) || 0;
         let v2 = parseFloat(nextValor) || 0;
         let result = 0;
-        alert(v1);
         switch (clicado.value) {
             case "+":  
                 document.getElementById("tela").value = clicado.value;
