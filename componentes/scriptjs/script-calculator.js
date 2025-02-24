@@ -89,7 +89,7 @@ sinalOperador.forEach(operador => {
                     case "-":
                         result = v1 - v2;
                         break;
-                    case "*":
+                    case "x":
                         result = v1 * v2;
                         break;
                     case "/":
