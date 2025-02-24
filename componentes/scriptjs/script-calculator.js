@@ -73,7 +73,7 @@ sinalOperador.forEach(operador => {
                 document.getElementById("tela").value = clicado.value;
                 sinal = clicado.value;
             break;
-            case "*":
+            case "x":
                 document.getElementById("tela").value = clicado.value;
                 sinal = clicado.value;
             break;
