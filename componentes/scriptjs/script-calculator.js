@@ -6,6 +6,26 @@ const sinalOperador = document.querySelectorAll('.btn-cal.operador');
 let sinal = "";
 const errButton = document.querySelectorAll('.err');
 
+document.getElementById("backspace").addEventListener("click", (event) => {
+    let tela = document.getElementById("tela");
+    let nova = tela.value;
+    tela.value = nova.slice(0, -1); // Remove o último caractere
+    valorBotao = nova.slice(0, -1);
+    //alert("Fui clicado")
+})
+
+document.getElementById("clean").addEventListener("click", (event) => {
+    tela.value = 0;
+    valorBotao = 0;
+    //alert("Fui clicado")
+})
+
+document.getElementById("clean-e").addEventListener("click", (event) => {
+    tela.value = 0;
+    valorBotao = 0;
+    //alert("Fui clicado")
+})
+
 // Adicionar evento de clique de cada botão
 botao.forEach(botao => {
     botao.addEventListener("click", (event) => {
@@ -18,8 +38,8 @@ botao.forEach(botao => {
         
         if ([...sinalOperador].some(op => op.value === clicado.value)) {
             if (firstValor === "") {
-                firstValor += valorBotao; // Acumula os valores no firstValor
-                
+                firstValor += valorBotao; 
+                // Acumula os valores no firstValor   
             }
                 valorBotao = ""; // Reseta o valor temporário
                 
@@ -32,7 +52,8 @@ botao.forEach(botao => {
         /*if (clicado.value === "="){
             alert("Os valores digitados sao: " + firstValor + " e " + nextValor);
             
-        }*/
+        }
+        */
     });
 });
 
@@ -42,7 +63,7 @@ sinalOperador.forEach(operador => {
         let v1 = parseFloat(firstValor) || 0;
         let v2 = parseFloat(nextValor) || 0;
         let result = 0;
-
+        alert(v1);
         switch (clicado.value) {
             case "+":  
                 document.getElementById("tela").value = clicado.value;
@@ -97,7 +118,13 @@ errButton.forEach(operador => {
     })
 })
 
-/* function verificarValor(valor) {
+/* 
+let minhaString = "88888888897969870"; // String original
+let novaString = minhaString.slice(0, -1); // Remove o último caractere
+
+console.log(novaString); // Resultado: "8888888889796987"
+
+function verificarValor(valor) {
         if (!isNaN(valor) && valor !== '') { 
             // É um número
             const numero = Number(valor);
@@ -116,3 +143,18 @@ errButton.forEach(operador => {
         }
     }*/
 
+/*document.getElementById("change-sign").addEventListener("click", (event) => {
+    let tela = document.getElementById("tela");
+    let nova = tela.value;
+
+    if ((Number(valorBotao) > 0) && (firstValor == v1)){
+        tela.value = '-' + tela.value;
+        v1 = v1 * (-1);
+        alert(v1);
+    } 
+    if ((Number(valorBotao) > 0) && (nextValor == v2) && (nextValor != "")){
+        tela.value = '-' + tela.value;
+        v2 *= -1;
+    }
+    //alert("Fui clicado");
+})*/
